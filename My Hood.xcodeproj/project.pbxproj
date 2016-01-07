@@ -12,6 +12,10 @@
 		6FEF5BDC1C3EE19C002BF3C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FEF5BDA1C3EE19C002BF3C9 /* Main.storyboard */; };
 		6FEF5BDE1C3EE19C002BF3C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FEF5BDD1C3EE19C002BF3C9 /* Assets.xcassets */; };
 		6FEF5BE11C3EE19C002BF3C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FEF5BDF1C3EE19C002BF3C9 /* LaunchScreen.storyboard */; };
+		6FEF5BEA1C3EE53F002BF3C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF5BE91C3EE53F002BF3C9 /* Post.swift */; };
+		6FEF5BEF1C3EFB51002BF3C9 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF5BEE1C3EFB51002BF3C9 /* PostCell.swift */; };
+		6FEF5BF21C3F020B002BF3C9 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF5BF11C3F020B002BF3C9 /* AddPostVC.swift */; };
+		6FEF5BF51C3F102C002BF3C9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF5BF41C3F102C002BF3C9 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6FEF5BDD1C3EE19C002BF3C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FEF5BE01C3EE19C002BF3C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FEF5BE21C3EE19C002BF3C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FEF5BE91C3EE53F002BF3C9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6FEF5BEE1C3EFB51002BF3C9 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		6FEF5BF11C3F020B002BF3C9 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		6FEF5BF41C3F102C002BF3C9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		6FEF5BD51C3EE19C002BF3C9 /* My Hood */ = {
 			isa = PBXGroup;
 			children = (
+				6FEF5BF31C3F1014002BF3C9 /* Services */,
+				6FEF5BEB1C3EFB00002BF3C9 /* View */,
+				6FEF5BE81C3EE52B002BF3C9 /* Model */,
 				6FEF5BD61C3EE19C002BF3C9 /* AppDelegate.swift */,
-				6FEF5BD81C3EE19C002BF3C9 /* ViewController.swift */,
-				6FEF5BDA1C3EE19C002BF3C9 /* Main.storyboard */,
 				6FEF5BDD1C3EE19C002BF3C9 /* Assets.xcassets */,
-				6FEF5BDF1C3EE19C002BF3C9 /* LaunchScreen.storyboard */,
 				6FEF5BE21C3EE19C002BF3C9 /* Info.plist */,
 			);
 			path = "My Hood";
+			sourceTree = "<group>";
+		};
+		6FEF5BE81C3EE52B002BF3C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6FEF5BE91C3EE53F002BF3C9 /* Post.swift */,
+				6FEF5BF01C3F01C6002BF3C9 /* Controller */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6FEF5BEB1C3EFB00002BF3C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FEF5BDF1C3EE19C002BF3C9 /* LaunchScreen.storyboard */,
+				6FEF5BEE1C3EFB51002BF3C9 /* PostCell.swift */,
+				6FEF5BDA1C3EE19C002BF3C9 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6FEF5BF01C3F01C6002BF3C9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6FEF5BD81C3EE19C002BF3C9 /* ViewController.swift */,
+				6FEF5BF11C3F020B002BF3C9 /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6FEF5BF31C3F1014002BF3C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6FEF5BF41C3F102C002BF3C9 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FEF5BEA1C3EE53F002BF3C9 /* Post.swift in Sources */,
 				6FEF5BD91C3EE19C002BF3C9 /* ViewController.swift in Sources */,
+				6FEF5BF21C3F020B002BF3C9 /* AddPostVC.swift in Sources */,
+				6FEF5BF51C3F102C002BF3C9 /* DataService.swift in Sources */,
 				6FEF5BD71C3EE19C002BF3C9 /* AppDelegate.swift in Sources */,
+				6FEF5BEF1C3EFB51002BF3C9 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +302,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dapper.My-Hood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -265,6 +314,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dapper.My-Hood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
